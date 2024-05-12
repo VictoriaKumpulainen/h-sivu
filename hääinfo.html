@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>kumpulaiset.häät</title>
+    <meta charset=" UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a class="active" href="hääinfo.html">Hääinfo</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1> Hääinfo </h1>
+        <table>
+            <tr>
+                <td id="days" class="countdown-value"></td>
+                <td id="hours" class="countdown-value"></td>
+                <td id="minutes" class="countdown-value"></td>
+                <td id="seconds" class="countdown-value"></td>
+            </tr>
+            <tr class="countdown-label">
+                <td>Päivää</td>
+                <td>Tuntia</td>
+                <td>Minuuttia</td>
+                <td>Sekuntia</td>
+            </tr>
+        </table>
+
+        <script>
+            var countDownDate = new Date("July 6, 2024 00:00:00").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("days").innerHTML = "Onnea";
+                    document.getElementById("hours").innerHTML = "!";
+                    document.getElementById("minutes").innerHTML = "!";
+                    document.getElementById("seconds").innerHTML = "!";
+                }
+
+            }, 1000);
+        </script>
+
+
+
+    </div>
+    <div class="lead">
+        <p>Ohjelmaa ja muuta infoa</p>
+
+    </div>
+
+    <div class="content">
+        <p> Vestibulum lorem sed risus ultricies tristique nulla. Tortor posuere ac ut consequat semper viverra. Sit
+            amet aliquam id diam maecenas ultricies. Mauris sit amet massa vitae tortor. Ut consequat semper viverra
+            nam. Facilisi nullam vehicula ipsum a arcu. Congue nisi vitae suscipit tellus mauris a diam. Ultrices
+            tincidunt arcu non sodales. Neque ornare aenean euismod elementum nisi. Ornare quam viverra orci sagittis eu
+            volutpat odio. Quis vel eros donec ac odio tempor orci dapibus ultricesp. </p>
+    </div>
+
+    <div class="lead">
+        <p>Pukukoodi</p>
+
+    </div>
+
+    <div class="content">
+        <p> Velit scelerisque in dictum non consectetur a erat nam. Ac auctor augue mauris augue neque gravida in.
+            Cursus euismod quis viverra nibh cras pulvinar. Vitae et leo duis ut diam quam. Enim neque volutpat ac
+            tincidunt vitae semper </p>
+    </div>
+
+    <div class="lead">
+        <p>Aikataulu</p>
+
+    </div>
+
+    <div class="content">
+        <p> Velit scelerisque in dictum non consectetur a erat nam. Ac auctor augue mauris augue neque gravida
+            in.
+            Cursus euismod quis viverra nibh cras pulvinar. Vitae et leo duis ut diam quam. Enim neque volutpat
+            ac
+            tincidunt vitae semper </p>
+    </div>
+
+    <div class="lead">
+        <p>Muistaminen</p>
+
+    </div>
+
+    <div class="content">
+        <p> Velit scelerisque in dictum non consectetur a erat nam. Ac auctor augue mauris augue neque
+            gravida in.
+            Cursus euismod quis viverra nibh cras pulvinar. Vitae et leo duis ut diam quam. Enim neque
+            volutpat ac
+            tincidunt vitae semper </p>
+    </div>
+    <div class="lead">
+
+        <p>Saapuminen</p>
+
+    </div>
+
+    <div class="content">
+        <p> Nisl vel pretium lectus quam id. Sodales ut eu sem integer vitae justo eget. Tellus at urna
+            condimentum mattis pellentesque id nibh. Nullam eget felis eget nunc lobortis mattis aliquam
+            faucibus. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Vitae proin
+            sagittis nisl rhoncus mattis rhoncus urna neque viverra. Donec pretium vulputate sapien nec
+            sagittis aliquam malesuada bibendum arcu</p>
+
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1967.6091919062726!2d22.264369077067677!3d60.45166697517723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c76fbd63543bb%3A0xb440e48b15cbfb3d!2sTurku%20Market%20Square!5e0!3m2!1sen!2sfi!4v1715467618124!5m2!1sen!2sfi"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+    <div class="footer">
+        <p> Victoria ja Jan-Erik 2024</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>kumpulaiset.häät</title>
+    <meta charset=" UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="hääinfo.html">Hääinfo</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1> Victoria & Jan-Erik </h1>
+        <table>
+            <tr>
+                <td id="days" class="countdown-value"></td>
+                <td id="hours" class="countdown-value"></td>
+                <td id="minutes" class="countdown-value"></td>
+                <td id="seconds" class="countdown-value"></td>
+            </tr>
+            <tr class="countdown-label">
+                <td>Päivää</td>
+                <td>Tuntia</td>
+                <td>Minuuttia</td>
+                <td>Sekuntia</td>
+            </tr>
+        </table>
+
+        <script>
+            var countDownDate = new Date("July 6, 2024 00:00:00").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("days").innerHTML = "Onnea";
+                    document.getElementById("hours").innerHTML = "!";
+                    document.getElementById("minutes").innerHTML = "!";
+                    document.getElementById("seconds").innerHTML = "!";
+                }
+
+            }, 1000);
+        </script>
+
+    </div>
+
+
+
+
+    <div class="lead">
+        <p> Meillä on suuri onni ja ilo kutsua teidät
+            jakamaan kanssamme se tärkeä päivä, <br>kun sanomme toisillemme tahdon lauantaina xx.xx.2024.<br>
+        </p>
+    </div>
+    <div class=content>
+        <br>Hääjuhla
+        pidetään osoitteessa xxxxxxxxxxx . Seuratkaa opasteita. Täältä sivustolta löytyy kaikki info koskien
+        häitä! Se toimii myös kutsuna ja RSVP:na. Tämä sivu myös päivittyy sen mukaan, kun tulee uutta
+        tietoa!
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore
+            magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Semper eget duis at tellus
+            at urna
+            condimentum. Condimentum lacinia quis vel eros donec ac odio tempor. Magna sit amet purus gravida
+            quis
+            blandit. Vestibulum mattis ullamcorper velit sed. Turpis in eu mi bibendum neque. Facilisis sed odio
+            morbi
+            quis commodo odio. Volutpat odio facilisis mauris sit amet massa vitae. Feugiat scelerisque varius
+            morbi
+            enim nunc. Leo duis ut diam quam nulla porttitor massa id. At erat pellentesque adipiscing commodo.
+
+        </p>
+    </div>
+    <div style="height: 300px">
+
+    </div>
+
+    <!-- <div class="lead">
+        <p>Cursus euismod quis viverra nibh</p>
+
+    </div>
+
+    <div class=content>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore
+            magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Semper eget duis at tellus
+            at urna
+            condimentum. Condimentum lacinia quis vel eros donec ac odio tempor. Magna sit amet purus gravida
+            quis
+            blandit. Vestibulum mattis ullamcorper velit sed. Turpis in eu mi bibendum neque. Facilisis sed odio
+            morbi
+            quis commodo odio. Volutpat odio facilisis mauris sit amet massa vitae. Feugiat scelerisque varius
+            morbi
+            enim nunc. Leo duis ut diam quam nulla porttitor massa id. At erat pellentesque adipiscing commodo.
+        </p>
+    </div> -->
+
+    <div class="footer">
+        <p> Victoria ja Jan-Erik 2024</p>
+    </div>
+</body>
+
+</html>

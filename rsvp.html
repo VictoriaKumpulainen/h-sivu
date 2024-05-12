@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>kumpulaiset.häät</title>
+    <meta charset=" UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="rsvp.html">RSVP</a></li>
+            <li><a href="hääinfo.html">Hääinfo</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1> RSVP </h1>
+        <table>
+            <tr>
+                <td id="days" class="countdown-value"></td>
+                <td id="hours" class="countdown-value"></td>
+                <td id="minutes" class="countdown-value"></td>
+                <td id="seconds" class="countdown-value"></td>
+            </tr>
+            <tr class="countdown-label">
+                <td>Päivää</td>
+                <td>Tuntia</td>
+                <td>Minuuttia</td>
+                <td>Sekuntia</td>
+            </tr>
+        </table>
+
+        <script>
+            var countDownDate = new Date("July 6, 2024 00:00:00").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("days").innerHTML = "Onnea";
+                    document.getElementById("hours").innerHTML = "!";
+                    document.getElementById("minutes").innerHTML = "!";
+                    document.getElementById("seconds").innerHTML = "!";
+                }
+
+            }, 1000);
+        </script>
+
+
+
+    </div>
+    <div class="lead">
+        <p>Ilmoittautuminen</p>
+
+    </div>
+
+    <div class="content">
+        <p> Pyydämme ilmoittamaan osallistumisestanne hääjuhlaan tai mahdollisesta esteestä xx.xx.2024 mennessä.
+
+            Ilmoitattehan samalla mahdolliset ruoka-aineallergiat ja erityisruokavaliot.
+
+            Hääkutsunne on henkilökohtainen. Jos teidän seurueeseen kuuluu muita ihmisiä, kirjoittakaa heidän nimet
+            myös.
+        <p>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfUegoA9diWkYE4YzNlM_53loPe2xkRd0rlUTAo98fp4-d7UQ/viewform?embedded=true">Loading…</iframe>
+        </p>
+
+
+    </div>
+    <div class="footer">
+        <p> Victoria ja Jan-Erik 2024</p>
+    </div>
+</body>
+
+</html>
