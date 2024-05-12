@@ -105,7 +105,9 @@ iframe {
     .content {
         width: 75%;
     }
-
+    .iframe {
+        width: 75%}
+        
     .header h1 {
         font-size: 70px;
 
