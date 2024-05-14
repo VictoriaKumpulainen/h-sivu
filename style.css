@@ -5,7 +5,7 @@
 
 
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("sormukset.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("sormukset.webp");
     background-position: center;
     background-size: cover;
     height: 400px;
@@ -78,7 +78,7 @@ iframe {
 
 .footer {
     color: #F5F5F5;
-    background-image: url("kukat.jpg");
+    background-image: url("kukat.webp");
     background-size: cover;
     text-align: center;
     padding-top: 20px;
@@ -108,9 +108,11 @@ iframe {
     .content {
         width: 75%;
     }
+
     iframe {
-        width: 75%}
-        
+        width: 75%
+    }
+
     .header h1 {
         font-size: 70px;
 
